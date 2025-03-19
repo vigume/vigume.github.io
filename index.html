@@ -4,19 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Vinícius site</title>
+    <style>
+        /* Definição de estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        
+        /* Cabeçalho estilizado */
+        header {
+            background-color: #070255;
+            color: white;
+            padding: 20px 0;
+            font-size: 24px;
+            position: relative;
+        }
+        
+        /* Imagem dentro do cabeçalho */
+        .logo {
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Seção de apresentação */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #070255;
+        }
+        
+        h3 {
+            color: #333;
+        }
+        
+        /* Links de redes sociais */
+        .social-links img {
+            width: 50px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+        
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #070255;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Portfólio - Vinícius Guedes Medeiros</h1>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo-iprj.png" alt="UERJ">
+    </header>
     
-    <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo-iprj.png" alt="uerj" style="width:300px"></center>
-    <h1 style="font-size:px"><center>Seja Bem Vindo ao site de<br> <b style="color:rgb(7, 2, 85);"> &#129299;Vinícius Guedes Medeiros </b> </center></h1>
-    <h3>Estudante de Engenharia de computação no Instituto Politécnico (UERJ) Unidade de Nova Friburgo </h3>
-    <ul>
-    <p> Abaixo Segue Algumas Informações:</p>
-    <p><i style="color:rgb(4, 104, 9);"><h4>Redes Sociais:</h4></i></p>
-    <p><a href="https://www.instagram.com/vinicius_tecnico/?hl=pt-br"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" alt="Instagram" style="width:95px"></a></p>
-    </ul>
-    <p><a href="https://monoschinos2.com">Site de animes.</a></p>
-
+    <div class="container">
+        <h1>Seja Bem-Vindo!</h1>
+        <h3>Estudante de Engenharia de Computação no Instituto Politécnico (UERJ) - Nova Friburgo</h3>
+        
+        <h4>Redes Sociais:</h4>
+        <div class="social-links">
+            <a href="https://www.instagram.com/vinicius_tecnico/?hl=pt-br" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" alt="Instagram">
+            </a>
+        </div>
+        
+        <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no Whats App</a>.</p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

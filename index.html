@@ -11,74 +11,82 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #d1d8e0; /* Fundo sutilmente azulado */
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        
+
         /* Cabeçalho estilizado */
         header {
             background-color: #309fcf;
             color: white;
-            padding: 100px 0;
+            padding: 50px 0;
             font-size: 24px;
             position: relative;
+            width: 100%;
         }
-        
+
         /* Imagem dentro do cabeçalho */
         .logo {
-            width: 300px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 200px;
+            margin-top: 10px;
         }
-        
-        /* Seção de apresentação */
+
+        /* Folha destacada */
         .container {
             max-width: 800px;
-            margin: 20px auto;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
         }
-        
+
         h1 {
             color: #070255;
         }
-        
+
         h3 {
             color: #333;
         }
-        
-        /* Parte final da página */
-                footer {
+
+        /* Rodapé */
+        footer {
             margin-top: 20px;
             padding: 10px;
             background: #070255;
             color: white;
+            width: 100%;
         }
-        
-        /* Estilizando o post do Instagram */
+
+        /* Último Post do Instagram */
         .instagram-post {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
+
     <header>
         <img class="logo" src="Imagens/Inovação.jpeg" alt="Foto">
     </header>
-    
+
     <div class="container">
-        <h1>Seja muito bem vindo ao meu</h1>
+        <h1>Seja muito bem-vindo ao meu</h1>
         <h1>Portfólio</h1>
         <h3>Antigo estudante de engenharia de computação no Instituto Politécnico (UERJ) - Nova Friburgo</h3>
-        <h3>Agora tenho diversos serviços e pode consustar eles aqui a baixo:</h3>
-        <h4>E ao lado de cada serviso tem um link para ver mais informações no <span style="color: #2bf02e;">Whats App.</span></h4>
-        <p><span style="color: #057807;">Quer comprar uma chave original do Windows</span> - <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Link aqui.</a></p>
+        <h3>Agora tenho diversos serviços, consulte-os abaixo:</h3>
+        <h4>E ao lado de cada serviço tem um link para mais informações no <span style="color: #2bf02e;">WhatsApp.</span></h4>
         
-        <p><span style="color: #057807;">Quer aulas particulares de Exatas</span> - <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Link aqui.</a></p>
+        <p><span style="color: #057807;">Quer comprar uma chave original do Windows?</span> - <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Link aqui.</a></p>
+
+        <p><span style="color: #057807;">Quer aulas particulares de Exatas?</span> - <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Link aqui.</a></p>
 
         <h4>Último Post no Instagram:</h4>
         <div class="instagram-post">
@@ -86,11 +94,12 @@
             <script async src="https://www.instagram.com/embed.js"></script>
         </div>
 
-        <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no Whats App</a>.</p>
+        <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no WhatsApp</a>.</p>
     </div>
-    
+
     <footer>
         <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>

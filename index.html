@@ -5,90 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinícius site</title>
-    <style>
+    <style>        
         /* Definição de estilos globais */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #d1d8e0; /* Fundo sutilmente azulado */
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        
+
         /* Cabeçalho estilizado */
         header {
-            background-color: #070255;
+            background-color: #309fcf;
             color: white;
-            padding: 20px 0;
-            font-size: 24px;
+            padding: 70px 0;
+            font-size: 45px;
             position: relative;
+            width: 100%;
         }
-        
+
         /* Imagem dentro do cabeçalho */
         .logo {
-            width: 300px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 350px;
+            margin-top: 15px;
         }
-        
-        /* Seção de apresentação */
+
+        /* Folha destacada */
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
         }
-        
+
         h1 {
             color: #070255;
         }
-        
+
         h3 {
             color: #333;
         }
-        
-        /* Links de redes sociais */
-        .link1 img {
-            width: 50px;
-            margin: 10px;
-            transition: transform 0.3s;
-        }
-        
-        /* Parte final da página */
+
+        /* Rodapé */
         footer {
             margin-top: 20px;
             padding: 10px;
             background: #070255;
             color: white;
+            width: 100%;
+        }
+
+        /* Último Post do Instagram */
+        .instagram-post {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Portfólio - Vinícius Guedes Medeiros</h1>
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo-iprj.png" alt="UERJ">
+        <img class="logo" src="Imagens/Inovação.jpeg" alt="Foto">
     </header>
-    
+
     <div class="container">
-        <h1>Seja Bem-Vindo!</h1>
-        <h3>Estudante de Engenharia de Computação no Instituto Politécnico (UERJ) - Nova Friburgo</h3>
+        <h1>Seja muito bem-vindo ao meu</h1>
+        <h1>Portfólio</h1>
+        <h3>Antigo estudante de engenharia de computação no Instituto Politécnico (UERJ) - Nova Friburgo</h3>
+        <h3>Agora tenho diversos serviços, consulte-os abaixo:</h3>
+        <h4>E ao lado de cada serviço tem um link para mais informações no <span style="color: #2bf02e;">WhatsApp.</span></h4>
         
-        <h4>Redes Sociais:</h4>
-        <div class="link1">
-            <a href="https://www.instagram.com/vinicius_tecnico/?hl=pt-br" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" alt="Instagram">
-            </a>
+        <p><span style="color: #057807;">Quer comprar uma chave original do Windows?</span> - <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Link aqui.</a></p>
+
+        <p><span style="color: #057807;">Quer aulas particulares de Exatas?</span> - <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Link aqui.</a></p>
+
+        <h4>Último Post no Instagram:</h4>
+        <div class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCDMojSpgR6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote>
+            <script async src="https://www.instagram.com/embed.js"></script>
         </div>
-        
-        <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no Whats App</a>.</p>
+
+        <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no WhatsApp</a>.</p>
     </div>
-    
+
     <footer>
         <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>

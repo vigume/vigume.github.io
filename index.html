@@ -81,9 +81,9 @@ body.white-mode {
          /* janela Whats app */
          .janela {
             max-width: 150px;
-            background: rgba(0, 0, 0, 0);
+            background: rgb(0, 0, 0);
             padding: 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgb(0, 0, 0);
             margin: 20px auto;
             position: fixed;
             bottom: 200px;/* altura dela */
@@ -91,7 +91,7 @@ body.white-mode {
             border: 2px solid #088118;
             border-radius: 100px;/* Boda arredondada */
             padding: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            box-shadow: 0 0 10px rgb(0, 0, 0);
             font-family: Arial, sans-serif;    
             color: #2bee2b;
             font-weight: bold;
@@ -101,9 +101,9 @@ body.white-mode {
          /* janela discord */
          .janela2 {
             max-width: 150px;
-            background: rgba(0, 0, 0, 0);
+            background: rgb(0, 0, 0);
             padding: 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgb(0, 0, 0);
             margin: 20px auto;
             position: fixed;
             bottom: 20px;
@@ -111,7 +111,7 @@ body.white-mode {
             border: 2px solid #260358;
             border-radius: 100px;/* Boda arredondada */
             padding: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            box-shadow: 0 0 10px rgb(0, 0, 0);
             font-family: Arial, sans-serif;
             z-index: 1000;
             color: #6536e3;
@@ -243,7 +243,8 @@ body.white-mode {
     <p>Infelizmente o Bot ainda não está disponivel 😄</p>
     <button onclick="fecharPopup()">Fechar</button>
   </div>
-
+<!-- Fundo escuro para fechar ao clicar fora -->
+<div id="overlay" class="overlay" onclick="closePopups()"></div>
     <script>
         const btn = document.getElementById('whiteModeBtn');
         btn.addEventListener('click', () => {
@@ -267,6 +268,16 @@ body.white-mode {
           document.getElementById("popup").classList.remove("active");
           document.getElementById("overlay").classList.remove("active");
         }
+        function openPopup(id) {
+      closePopups(); // Fecha qualquer outro popup aberto
+      document.getElementById(id).style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closePopups() {
+      document.querySelectorAll('.popup').forEach(p => p.style.display = 'none');
+      document.getElementById('overlay').style.display = 'none';
+    }
       </script>
       
 </body>

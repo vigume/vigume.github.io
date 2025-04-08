@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #d1d8e0; /* Fundo sutilmente azulado */
             text-align: center;
             display: flex;
             justify-content: center;
@@ -23,34 +22,157 @@
         /* Cabeçalho estilizado */
         header {
             background-color: #309fcf;
-            color: white;
-            padding: 70px 0;
+            padding: 30px 0;
             font-size: 45px;
             position: relative;
-            width: 100%;
+            width: 100%
         }
 
         /* Imagem dentro do cabeçalho */
         .logo {
-            width: 350px;
-            margin-top: 15px;
+            width: 700px;
+            margin-top: 5px;
         }
+
+        /* Estilo padrão (escuro) */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para modo claro */
+body.white-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Botão de modo claro */
+#whiteModeBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #070255;
+  color: rgb(249, 248, 248);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+#whiteModeBtn:hover {
+  background-color: #2c2c90;
+}
+
 
         /* Folha destacada */
         .container {
             max-width: 900px;
-            background: white;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 50px; /* Boda arredondada */
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
             margin: 20px auto;
         }
 
-        h1 {
-            color: #070255;
+         /* janela Whats app */
+         .janela {
+            max-width: 150px;
+            background: rgb(0, 0, 0);
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            position: fixed;
+            bottom: 200px;/* altura dela */
+            right: 20px; /* canto dela */
+            border: 2px solid #088118;
+            border-radius: 100px;/* Boda arredondada */
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;    
+            color: #2bee2b;
+            font-weight: bold;
+            text-decoration: none;
         }
 
-        h3 {
+         /* janela discord */
+         .janela2 {
+            max-width: 150px;
+            background: rgb(0, 0, 0);
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* canto dela */
+            border: 2px solid #260358;
+            border-radius: 100px;/* Boda arredondada */
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            color: #6536e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+ /* Estilo básico da janela pop-up */
+ .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #000000;
+      padding: 30px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      z-index: 9999;
+    }
+
+    .popup.active {
+      display: block;
+    }
+
+    .popup button {
+      margin-top: 20px;
+      padding: 8px 12px;
+      background-color: #070255;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Fundo escurecido atrás do pop-up */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* Link estilizado */
+    a.popup-link {
+      color: #070255;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+        h1 {
+            color: #309fcf;
+        }
+
+        h2 {
             color: #333;
         }
 
@@ -60,12 +182,12 @@
             padding: 10px;
             background: #070255;
             color: white;
-            width: 100%;
+            width: 98.4%;
         }
 
         /* Último Post do Instagram */
         .instagram-post {
-            margin-top: 15px;
+            margin-top: 10px;
             display: flex;
             justify-content: center;
         }
@@ -77,13 +199,15 @@
         <img class="logo" src="Imagens/Inovação.jpeg" alt="Foto">
     </header>
 
+    <button id="whiteModeBtn">Modo Escuro</button> 
+
     <div class="container">
         <h1>Seja muito bem-vindo ao meu</h1>
         <h1>Portfólio</h1>
         <h3>Antigo estudante de engenharia de computação no Instituto Politécnico (UERJ) - Nova Friburgo</h3>
         <h3>Agora tenho diversos serviços, consulte-os abaixo:</h3>
         <h4>E ao lado de cada serviço tem um link para mais informações no <span style="color: #2bf02e;">WhatsApp.</span></h4>
-        
+    
         <p><span style="color: #057807;">Quer comprar uma chave original do Windows?</span> - <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Link aqui.</a></p>
 
         <p><span style="color: #057807;">Quer aulas particulares de Exatas?</span> - <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Link aqui.</a></p>
@@ -96,10 +220,49 @@
 
         <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no WhatsApp</a>.</p>
     </div>
-
+    <div class="janela">
+        <h3>Fale com o Bot no Wpp</h3>
+        <h5>Clique no <a class="popup-link" onclick="abrirPopup()">🤖🤖🤖</a> para iniciar uma conversa com o bot.</h5>
+    </div>
+    <div class="janela2">
+        <h3>Meu grupo no Discord</h3>
+        <h5>Clique no <a href="https://discord.gg/w69NNUnB2P" target="_blank">🤖🤖🤖</a> para entrar no grupo</h5>
+    </div>
     <footer>
         <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>
     </footer>
+    <div class="overlay" id="overlay"></div>
 
+  <div class="popup" id="popup">
+    <h3>Olá!</h3>
+    <p>Infelizmente o Bot ainda não está disponivel 😄</p>
+    <button onclick="fecharPopup()">Fechar</button>
+  </div>
+
+    <script>
+        const btn = document.getElementById('whiteModeBtn');
+        btn.addEventListener('click', () => {
+          document.body.classList.toggle('white-mode');
+          
+          // Muda o texto do botão
+          if (document.body.classList.contains('white-mode')) {
+            btn.textContent = 'Modo Claro';
+          } else {
+            btn.textContent = 'Modo Escuro';
+          }
+        });
+      </script>
+      <script>
+        function abrirPopup() {
+          document.getElementById("popup").classList.add("active");
+          document.getElementById("overlay").classList.add("active");
+        }
+    
+        function fecharPopup() {
+          document.getElementById("popup").classList.remove("active");
+          document.getElementById("overlay").classList.remove("active");
+        }
+      </script>
+      
 </body>
 </html>

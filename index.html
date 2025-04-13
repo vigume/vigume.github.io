@@ -54,8 +54,8 @@ body.white-mode {
   top: 20px;
   left: 20px;
   padding: 10px 20px;
-  background-color: #070255;
-  color: rgb(249, 248, 248);
+  background-color: #070255; /* cor botão */
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -74,8 +74,15 @@ body.white-mode {
             max-width: 9000px;
             padding: 40px;
             border-radius: 50px; /* Boda arredondada */
-            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px rgb(255, 50, 50);
             margin: 20px auto;
+        }
+        .containerjanela {
+          display: flex;
+            justify-content: center;
+            gap: 10px; /* espaço entre elas */
+            flex-wrap: wrap; /* permite quebrar em tela pequena */
+            margin-top: 30px;
         }
 
          /* janela Whats app */
@@ -85,7 +92,6 @@ body.white-mode {
             padding: 40px;
             box-shadow: 0 4px 10px rgb(0, 0, 0);
             margin: 20px auto;
-            position: fixed;
             bottom: 200px;/* altura dela */
             right: 20px; /* canto dela */
             border: 2px solid #088118;
@@ -105,7 +111,6 @@ body.white-mode {
             padding: 40px;
             box-shadow: 0 4px 10px rgb(0, 0, 0);
             margin: 20px auto;
-            position: fixed;
             bottom: 20px;
             right: 20px; /* canto dela */
             border: 2px solid #260358;
@@ -118,8 +123,48 @@ body.white-mode {
             font-weight: bold;
             text-decoration: none;
         }
+
+        .janelagamer {
+            max-width: 150px;
+            background: rgb(0, 0, 0);
+            padding: 40px;
+            box-shadow: 0 4px 10px rgb(0, 0, 0);
+            margin: 20px auto;
+            bottom: 20px;
+            right: 20px; /* canto dela */
+            border: 2px solid #ff0000; /* cor do aro*/
+            border-radius: 100px;/* Boda arredondada */
+            padding: 15px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            color: #e8068a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .postit {
+            max-width: 150px;
+            background: rgb(233, 240, 2);
+            padding: 40px;
+            box-shadow: 0 4px 10px rgb(0, 0, 0);
+            margin: 20px auto;
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* canto dela */
+            border: 2px solid #260358;
+            border-radius: 10px;/* Boda arredondada */
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.663);
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;  
+          }
+
  /* Estilo básico da janela pop-up */
- .popup {
+    .popup {
       display: none;
       position: fixed;
       top: 50%;
@@ -135,6 +180,23 @@ body.white-mode {
       max-width: 400px;
     }
 
+    .popuppost {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #000000;
+      padding: 30px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      z-index: 9999;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    
     .popup.active {
       display: block;
     }
@@ -142,7 +204,21 @@ body.white-mode {
     .popup button {
       margin-top: 20px;
       padding: 8px 12px;
-      background-color: #070255;
+      background-color: #070255; /* cor botão fechar */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popuppost.active {
+      display: block;
+    }
+
+    .popuppost button {
+      margin-top: 20px;
+      padding: 8px 12px;
+      background-color: #070255; /* cor botão fechar */
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -167,6 +243,11 @@ body.white-mode {
 
     /* Link estilizado */
     a.popup-link {
+      color: #070255;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    a.popuppost-link {
       color: #070255;
       font-weight: bold;
       cursor: pointer;
@@ -201,22 +282,38 @@ body.white-mode {
 <body>
 
     <header>
-        <img class="logo" src="Imagens/Inovação.jpeg" alt="Foto">
+        <img class="logo" src="Imagens/Inovação.jpeg" alt="Foto-minha">
     </header>
 
-    <button id="whiteModeBtn">Modo Escuro</button> 
+    <button id="whiteModeBtn">🌙</button> 
 
     <div class="container">
-        <h1>Seja muito bem-vindo ao meu</h1>
-        <h1>Portfólio</h1>
-        <h3>Antigo estudante de engenharia de computação no Instituto Politécnico (UERJ) - Nova Friburgo</h3>
+        <h1>Este é meu Portfólio</h1>
+        <h1>E fiz este site bem interaivo</h1>
+        <h3>Como antigo estudante de engenharia de computação no Instituto Politécnico (UERJ) - Nova Friburgo, e como a programação está em tudo, não quis ficar de fora de poder fazer meu próprio site</h3>
+        <h3><span style="color: #e70acd;">No canto superior tem um botão para mudar de tema o site, onde veja emojs em sequencia é um botão, então pode interagir</span></h3>
         <h3>Agora tenho diversos serviços, consulte-os abaixo:</h3>
         <h4>E ao lado de cada serviço tem um link para mais informações no <span style="color: #2bf02e;">WhatsApp.</span></h4>
     
         <p><span style="color: #057807;">Quer comprar uma chave original do Windows?</span> - <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Link aqui.</a></p>
 
         <p><span style="color: #057807;">Quer aulas particulares de Exatas?</span> - <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Link aqui.</a></p>
+    
+    <div class="containerjanela">
+        <div class="janela">
+          <h3>Fale com o Bot no Wpp</h3>
+          <h5>Clique no <a class="popup-link" onclick="abrirPopup()">🤖🤖🤖</a> para iniciar uma conversa com o bot.</h5>
+      </div>
+      <div class="janelagamer">
+        <h3>Quer jogar</h3>
+        <h5>Futuramente terá um Link aqui para isso!</h5>
+    </div>
+      <div class="janela2">
+          <h3>Meu grupo no Discord</h3>
+          <h5>Clique no <a href="https://discord.gg/w69NNUnB2P" target="_blank">🤖🤖🤖</a> para entrar no grupo</h5>
+      </div>
 
+    </div>
         <h4>Último Post no Instagram:</h4>
         <div class="instagram-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCDMojSpgR6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote>
@@ -225,14 +322,12 @@ body.white-mode {
 
         <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no WhatsApp</a>.</p>
     </div>
-    <div class="janela">
-        <h3>Fale com o Bot no Wpp</h3>
-        <h5>Clique no <a class="popup-link" onclick="abrirPopup()">🤖🤖🤖</a> para iniciar uma conversa com o bot.</h5>
-    </div>
-    <div class="janela2">
-        <h3>Meu grupo no Discord</h3>
-        <h5>Clique no <a href="https://discord.gg/w69NNUnB2P" target="_blank">🤖🤖🤖</a> para entrar no grupo</h5>
-    </div>
+    <!-- Pop ups -->
+    <div class="postit">
+      <h3>Post de Informações</h3>
+      <h5>Clique nos controles <a class="popuppost-link" onclick="abrirPopuppost()">🎮🎮</a> e veja as atualizações</h5>
+  </div>
+    <!-- Pop ups -->
     <footer>
         <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>
     </footer>
@@ -240,11 +335,15 @@ body.white-mode {
 
   <div class="popup" id="popup">
     <h3>Olá!</h3>
-    <p>Infelizmente o Bot ainda não está disponivel 😄</p>
+    <p>Infelizmente o Bot ainda não está disponivel 🤖👍</p>
     <button onclick="fecharPopup()">Fechar</button>
   </div>
-<!-- Fundo escuro para fechar ao clicar fora -->
-<div id="overlay" class="overlay" onclick="closePopups()"></div>
+  <div class="popuppost" id="popuppost">
+    <h3>Veja os links</h3>
+    <p>Sem atualizações significaivas no momento 😅</p>
+    <button onclick="fecharPopuppost()">Fechar</button>
+  </div>
+
     <script>
         const btn = document.getElementById('whiteModeBtn');
         btn.addEventListener('click', () => {
@@ -252,9 +351,9 @@ body.white-mode {
           
           // Muda o texto do botão
           if (document.body.classList.contains('white-mode')) {
-            btn.textContent = 'Modo Claro';
+            btn.textContent = '☀';
           } else {
-            btn.textContent = 'Modo Escuro';
+            btn.textContent = '🌙';
           }
         });
       </script>
@@ -268,16 +367,17 @@ body.white-mode {
           document.getElementById("popup").classList.remove("active");
           document.getElementById("overlay").classList.remove("active");
         }
-        function openPopup(id) {
-      closePopups(); // Fecha qualquer outro popup aberto
-      document.getElementById(id).style.display = 'block';
-      document.getElementById('overlay').style.display = 'block';
-    }
 
-    function closePopups() {
-      document.querySelectorAll('.popup').forEach(p => p.style.display = 'none');
-      document.getElementById('overlay').style.display = 'none';
-    }
+        function abrirPopuppost() {
+          document.getElementById("popuppost").classList.add("active");
+          document.getElementById("overlay").classList.add("active");
+        }
+    
+        function fecharPopuppost() {
+          document.getElementById("popuppost").classList.remove("active");
+          document.getElementById("overlay").classList.remove("active");
+        }
+        
       </script>
       
 </body>

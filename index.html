@@ -9,6 +9,15 @@
         /* Definição de estilos globais */
         body {
             font-family: Arial, sans-serif;
+            
+            p {
+    line-height: 1.0;
+}
+
+h1, h2 {
+    line-height: 0.5;
+}
+
             margin: 0;
             padding: 0;
             text-align: center;
@@ -144,8 +153,9 @@ body.white-mode {
         }
 
         .postit {
-            max-width: 150px;
-            background: rgb(233, 240, 2);
+            h4 {line-height: 0.05;}
+            max-width: 85px;
+            background: rgba(43, 68, 255, 0.39);
             padding: 40px;
             box-shadow: 0 4px 10px rgb(0, 0, 0);
             margin: 20px auto;
@@ -153,7 +163,7 @@ body.white-mode {
             bottom: 20px;
             left: 20px; /* canto dela */
             border: 2px solid #260358;
-            border-radius: 10px;/* Boda arredondada */
+            border-radius: 180px;/* Boda arredondada */
             padding: 15px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.663);
             font-family: Arial, sans-serif;
@@ -324,9 +334,9 @@ body.white-mode {
     </div>
     <!-- Pop ups -->
     <div class="postit">
-      <h3>Post de Informações</h3>
-      <h5>Clique nos controles <a class="popuppost-link" onclick="abrirPopuppost()">🎮🎮</a> e veja as atualizações</h5>
-  </div>
+      <h4>Informações</h4>
+      <h5><a class="popuppost-link" onclick="abrirPopuppost()">🎮Click🎮</a></h5>
+    </div>
     <!-- Pop ups -->
     <footer>
         <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>

@@ -3,74 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Gamer</title>
+    <title>Jogo em Desenvolvimento</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
-            color: #00ffcc;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0e0e0e;
+            color: #00ffea;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
             min-height: 100vh;
         }
 
         header {
-            background-color: #1c1c1c;
+            background-color: #1f1f1f;
             width: 100%;
-            padding: 20px;
             text-align: center;
+            padding: 40px 0;
             font-size: 2em;
-            border-bottom: 2px solid #00ffcc;
+            font-weight: bold;
+            box-shadow: 0 0 10px #00ffea;
         }
 
         .container {
-            max-width: 1000px;
-            width: 90%;
-            margin-top: 30px;
-            background-color: #121212;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px #00ffcc;
-        }
-
-        h1 {
-            color: #00ffcc;
-            text-align: center;
-        }
-
-        p {
-            color: #ccc;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #00ffcc;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
+            max-width: 900px;
+            padding: 40px;
+            background-color: #161616;
+            box-shadow: 0 0 20px #00ffea88;
+            margin: 40px 0;
             border-radius: 10px;
-            transition: 0.3s;
         }
 
-        a.button:hover {
-            background-color: #00bfa6;
+        .container h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background: #00ffea;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #00ccbe;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #1f1f1f;
+            color: #888;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        🎮 Área Gamer - Vinícius
+        🚀 Jogo em C++ - Estilo Pac-Man
     </header>
+
     <div class="container">
-        <h1>Bem-vindo à área de desenvolvimento do jogo!</h1>
-        <p>Aqui você vai ver e testar os recursos do meu jogo conforme vou programando.</p>
-        <a href="index.html" class="button">Voltar para o Início</a>
+        <h2>Bem-vindo à área de desenvolvimento do jogo!</h2>
+        <p>Estamos trabalhando em um novo jogo em C++ com base no estilo clássico do Pac-Man, mas com novos personagens e mecânicas.</p>
+        <button class="button" onclick="alert('Página de desenvolvimento em breve!')">Ver progresso</button>
     </div>
+
+    <footer>
+        © 2025 - Projeto Jogo by Vinícius
+    </footer>
 </body>
 </html>

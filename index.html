@@ -1,394 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinícius site</title>
-    <style>        
-        /* Definição de estilos globais */
-        body {
-            font-family: Arial, sans-serif;
-            
-            p {
-    line-height: 1.0;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vinícius | Portfólio</title>
 
-h1, h2 {
-    line-height: 1.0;
-}
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="style.css" />
 
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  <!-- Ícones e fontes (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
-        /* Cabeçalho estilizado */
-        header {
-            background-color: #309fcf;
-            padding: 30px 0;
-            font-size: 45px;
-            position: relative;
-            width: 100%
-        }
-
-        /* Imagem dentro do cabeçalho */
-        .logo {
-            width: 95%;
-      max-width: 700px;
-            margin-top: 5px;
-        }
-
-        /* Estilo padrão (escuro) */
-body {
-  background-color: #000000;
-  color: #ffffff;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Estilo para modo claro */
-body.white-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* Botão de modo claro */
-#whiteModeBtn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 10px 20px;
-  background-color: #070255; /* cor botão */
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1000;
-  transition: background-color 0.3s;
-}
-
-#whiteModeBtn:hover {
-  background-color: #2c2c90;
-}
-
-
-        /* Folha destacada */
-        .container {
-            width: 70%;
-            max-width: 9000px;
-            padding: 40px;
-            border-radius: 50px; /* Boda arredondada */
-            box-shadow: 0px 0px 10px rgb(255, 50, 50);
-            margin: 20px auto;
-        }
-        .containerjanela {
-          display: flex;
-            justify-content: center;
-            gap: 10px; /* espaço entre elas */
-            flex-wrap: wrap; /* permite quebrar em tela pequena */
-            margin-top: 30px;
-        }
-
-         /* janela Whats app */
-         .janela {
-            max-width: 150px;
-            background: rgb(0, 0, 0);
-            padding: 40px;
-            box-shadow: 0 4px 10px rgb(0, 0, 0);
-            margin: 20px auto;
-            bottom: 200px;/* altura dela */
-            right: 20px; /* canto dela */
-            border: 2px solid #088118;
-            border-radius: 100px;/* Boda arredondada */
-            padding: 15px;
-            box-shadow: 0 0 10px rgb(0, 0, 0);
-            font-family: Arial, sans-serif;    
-            color: #2bee2b;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-         /* janela discord */
-         .janela2 {
-            max-width: 150px;
-            background: rgb(0, 0, 0);
-            padding: 40px;
-            box-shadow: 0 4px 10px rgb(0, 0, 0);
-            margin: 20px auto;
-            bottom: 20px;
-            right: 20px; /* canto dela */
-            border: 2px solid #260358;
-            border-radius: 100px;/* Boda arredondada */
-            padding: 15px;
-            box-shadow: 0 0 10px rgb(0, 0, 0);
-            font-family: Arial, sans-serif;
-            z-index: 1000;
-            color: #6536e3;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .janelagamer {
-            max-width: 150px;
-            background: rgb(0, 0, 0);
-            padding: 40px;
-            box-shadow: 0 4px 10px rgb(0, 0, 0);
-            margin: 20px auto;
-            bottom: 20px;
-            right: 20px; /* canto dela */
-            border: 2px solid #ff0000; /* cor do aro*/
-            border-radius: 100px;/* Boda arredondada */
-            padding: 15px;
-            box-shadow: 0 0 10px rgb(0, 0, 0);
-            font-family: Arial, sans-serif;
-            z-index: 1000;
-            color: #e8068a;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .postit {
-            h4 {line-height: 0.05;}
-            max-width: 85px;
-            background: rgb(32, 57, 246);
-            padding: 40px;
-            box-shadow: 0 4px 10px rgb(0, 0, 0);
-            margin: 20px auto;
-            position: fixed;
-            bottom: 20px;
-            left: 20px; /* canto dela */
-            border: 2px solid #260358;
-            border-radius: 180px;/* Boda arredondada */
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.663);
-            font-family: Arial, sans-serif;
-            z-index: 1000;
-            color: #000000;
-            font-weight: bold;
-            text-decoration: none;  
-          }
-
- /* Estilo básico da janela pop-up */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #000000;
-      padding: 30px;
-      border: 2px solid #333;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      z-index: 9999;
-      width: 90%;
-      max-width: 400px;
-    }
-
-    .popuppost {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #000000;
-      padding: 30px;
-      border: 2px solid #333;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      z-index: 9999;
-      width: 90%;
-      max-width: 400px;
-    }
-
-    
-    .popup.active {
-      display: block;
-    }
-
-    .popup button {
-      margin-top: 20px;
-      padding: 8px 12px;
-      background-color: #070255; /* cor botão fechar */
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .popuppost.active {
-      display: block;
-    }
-
-    .popuppost button {
-      margin-top: 20px;
-      padding: 8px 12px;
-      background-color: #070255; /* cor botão fechar */
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Fundo escurecido atrás do pop-up */
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 9998;
-    }
-
-    .overlay.active {
-      display: block;
-    }
-
-    /* Link estilizado */
-    a.popup-link {
-      color: #070255;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    a.popuppost-link {
-      color: #070255;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-        h1 {
-            color: #309fcf;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        /* Rodapé */
-        footer {
-            margin-top: 20px;
-            padding: 10px;
-            background: #070255;
-            color: white;
-            width: 98.4%;
-        }
-
-        /* Último Post do Instagram */
-        .instagram-post {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-        }
-        
-    </style>
+  <!-- Ícone de menu -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <header>
-        <img class="logo" src="Imagens/Inovação.jpeg" alt="Foto-minha">
-    </header>
-
-    <button id="whiteModeBtn">🌙</button> 
-
-    <div class="container">
-        <h1>Este é meu Portfólio</h1>
-        <h1>E fiz este site bem interaivo</h1>
-        <h3>Como antigo estudante de engenharia de computação no Instituto Politécnico (UERJ) - Nova Friburgo, e como a programação está em tudo, não quis ficar de fora de poder fazer meu próprio site</h3>
-        <h3><span style="color: #e70acd;">No canto superior tem um botão para mudar de tema o site, onde veja emojs em sequencia é um botão, então pode interagir</span></h3>
-        <h3>Agora tenho diversos serviços, consulte-os abaixo:</h3>
-        <h4>E ao lado de cada serviço tem um link para mais informações no <span style="color: #2bf02e;">WhatsApp.</span></h4>
+  <!-- BARRA FIXA SUPERIOR -->
+  <header class="navbar">
+    <div class="logo">
+      <!-- Substitua por sua imagem -->
+      <img src="Imagens/grouck.png" alt="Logo Vinícius" />
+    </div>
     
-        <p><span style="color: #057807;">Quer comprar uma chave original do Windows?</span> - <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Link aqui.</a></p>
+    <button id="themeToggle" class="theme-btn">🌙</button>
 
-        <p><span style="color: #057807;">Quer aulas particulares de Exatas?</span> - <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Link aqui.</a></p>
-    
-    <div class="containerjanela">
-        <div class="janela">
-          <h3>Fale com o Bot no Wpp</h3>
-          <h5>Clique no <a class="popup-link" onclick="abrirPopup()">🤖🤖🤖</a> para iniciar uma conversa com o bot.</h5>
-      </div>
-      <div class="janelagamer">
-        <h3>Quer jogar</h3>
-        <h5>Utilize os controlos >> <a href="games.html">🎮🎮🎮</a></h5>
+    <div class="menu-btn" id="menuToggle">
+      <!-- Ícone de menu hamburguer -->
+      <i data-lucide="menu"></i>
     </div>
-      <div class="janela2">
-          <h3>Meu grupo no Discord</h3>
-          <h5>Clique no <a href="https://discord.gg/w69NNUnB2P" target="_blank">🤖🤖🤖</a> para entrar no grupo</h5>
-      </div>
+  </header>
 
-    </div>
-        <h4>Último Post no Instagram:</h4>
-        <div class="instagram-post">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIw9FI5yvjS/?igsh=emlibHBoMjRub2Ux" data-instgrm-version="14"></blockquote>
-            <script async src="https://www.instagram.com/embed.js"></script>
-        </div>
+  <!-- MENU LATERAL (pode ser animado depois) -->
+  <nav class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#Instagram">Instagram</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
-        <p>Para mais informações pode iniciar uma <a href="https://wa.me/5521982545315" target="_blank">Conversa no WhatsApp</a>.</p>
-    </div>
-    <!-- Pop ups -->
-    <div class="postit">
-      <h4>Informações</h4>
-      <h5><a class="popuppost-link" onclick="abrirPopuppost()">🎮Click🎮</a></h5>
-    </div>
-    <!-- Pop ups -->
-    <footer>
-        <p>&copy; 2025 Vinícius Guedes Medeiros - Todos os direitos reservados.</p>
-    </footer>
-    <div class="overlay" id="overlay"></div>
+  <!-- SEÇÃO DE DESTAQUE COM IMAGEM -->
+  <section class="hero" id="inicio">
+    <!-- Substitua pelo caminho da sua imagem -->
+    <img src="Imagens/Inovação.jpeg" alt="Capa" class="hero-image" />
+    <h1 class="hero-title">Portifólio</h1>
+    <p class="hero-subtitle">Desenvolvedor | Bot Maker | Educador</p>
+  </section>
 
-  <div class="popup" id="popup">
-    <h3>Olá!</h3>
-    <p>Infelizmente o Bot ainda não está disponivel 🤖👍</p>
-    <button onclick="fecharPopup()">Fechar</button>
-  </div>
-  <div class="popuppost" id="popuppost">
-    <h3>Veja os links</h3>
-    <p>Sem atualizações significaivas no momento 😅</p>
-    <button onclick="fecharPopuppost()">Fechar</button>
+  <!-- BLOCO QUE SURGE AO ROLAR -->
+  <section class="section reveal" id="sobre">
+    <h2>Sobre mim</h2>
+    <p>
+      Sou apaixonado por tecnologia e ensino. Já atuei com bots, automações e era estudante de Engenharia de Computação (UERJ).<br>
+      Atualmente estudo por conta própria para aprimorar minhas habilidades técnicas.
+    </p>
+  </section>
+
+  <!-- Inicio dos serviços -->
+  <section class="section reveal" id="servicos">
+  <h2>Serviços</h2>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="aulas">📚 Aulas Particulares</button>
+    <button class="tab-btn active" data-tab="bot">🤖 Bot WhatsApp</button>
+    <button class="tab-btn" data-tab="licencas">🔑 Licenças Windows</button>
   </div>
 
-    <script>
-        const btn = document.getElementById('whiteModeBtn');
-        btn.addEventListener('click', () => {
-          document.body.classList.toggle('white-mode');
-          
-          // Muda o texto do botão
-          if (document.body.classList.contains('white-mode')) {
-            btn.textContent = '☀';
-          } else {
-            btn.textContent = '🌙';
-          }
-        });
-      </script>
-      <script>
-        function abrirPopup() {
-          document.getElementById("popup").classList.add("active");
-          document.getElementById("overlay").classList.add("active");
-        }
-    
-        function fecharPopup() {
-          document.getElementById("popup").classList.remove("active");
-          document.getElementById("overlay").classList.remove("active");
-        }
+  <div class="tab-content active" id="bot">
+    <p>Automatize atendimentos com bots personalizados para WhatsApp.</p>
+    <button class="button" onclick="abrirPopup()">Falar agora</button>
+  </div>
 
-        function abrirPopuppost() {
-          document.getElementById("popuppost").classList.add("active");
-          document.getElementById("overlay").classList.add("active");
-        }
+  <div class="tab-content" id="aulas">
+    <p>Aulas de matemática, física e programação para todos os níveis.</p>
+    <a href="https://wa.me/p/7663163480368904/5521982545315" target="_blank">Agendar aula</a>
+  </div>
+
+  <div class="tab-content" id="licencas">
+    <p>Venda de chaves originais do Windows com instalação remota.</p>
+    <a href="https://wa.me/p/4790466477694707/5521982545315" target="_blank">Comprar agora</a>
+  </div>
+</section>
+ <!-- Fim dos serviços -->
+
+ <section class="section reveal" id="Instagram">
+    <h2>Instagram</h2>
+    <p>Últimos Posts </p>
+    <div class="instagram-wrapper">
+    <div class="insta-post">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMN0sowRKHV/?igsh=ZGhob296aHc1d2dt" data-instgrm-version="14"></blockquote>
+    </div>
+    <div class="insta-post">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCDMojSpgR6/?igsh=dHNobzBpbWpzdjlk" data-instgrm-version="14"></blockquote>
+    </div>
+    <script async src="https://www.instagram.com/embed.js"></script>
+  </div>  
+  </section>
     
-        function fecharPopuppost() {
-          document.getElementById("popuppost").classList.remove("active");
-          document.getElementById("overlay").classList.remove("active");
-        }
-        
-      </script>
-      
+  <section class="section reveal" id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato pelo WhatsApp: <a href="https://wa.me/5521982545315" target="_blank">Clique aqui</a></p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Vinícius Medeiros</p>
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script>
+    lucide.createIcons(); // Ativa ícones do Lucide
+  </script>
+
+  <!-- Overlay escurecido -->
+<div id="overlay" class="overlay"></div>
+
+<!-- Pop-up do Bot WhatsApp -->
+<div id="popup" class="popup">
+  <h3>🤖 Em breve!</h3>
+  <p>O bot do WhatsApp ainda não está disponível.</p>
+  <button onclick="fecharPopup()">Fechar</button>
+</div>
+<script src="script.js"></script>
+
 </body>
 </html>
